@@ -296,7 +296,7 @@ config.vm.network :forwarded_port, guest: 9200, host: 1234
 
 Sometimes, Vagrant will attempt to auto-correct this for you. In this case, Vagrant was unable to. This is usually because the guest machine is in a state which doesn't allow modifying port forwarding. You could try 'vagrant reload' (the equivalent of running a halt followed by an up) so vagrant can attempt to auto-correct this upon booting. Be warned that any unsaved work might be lost. <br />
 __Command__ `vagrant up --provision` <br />
-__Info__ When I run `vagrant up` I get an error about a port collision, in this case it is port `9200` - The reason is that I have an Elasticsearch container running on my local laptop, and since HashiQube also run Elasticsearch this port is taken. <br />
+__Info__ When I run `vagrant up` I get an error about a port collision, in this case, it is port `9200` - The reason is that I have an Elasticsearch container running on my local laptop, and since HashiQube also run Elasticsearch this port is taken. <br />
 __Solution__ I stop the Elasticsearch docker container and I run `vagrant up` again, or I hash the line out in the Vagrantfile like the example below <br />
 
 ```
